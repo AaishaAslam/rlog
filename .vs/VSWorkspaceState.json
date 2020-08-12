@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\home",
-    "\\templates"
+    "\\templates",
+    "\\user"
   ],
-  "SelectedNode": "\\home\\views.py",
+  "SelectedNode": "\\templates\\signin.html",
   "PreviewInSolutionExplorer": false
 }
