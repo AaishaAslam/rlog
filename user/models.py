@@ -1,17 +1,20 @@
 from django.db import models
 
 # Create your models here.
+
 class User(models.Model):
-	full_name= models.CharField(max_length=100)
-	organisation_type= models.CharField(max_length=10)
-	organisation_name= models.CharField(max_length=20)
-	designation= models.CharField(max_length=20)
-	pin_code= models.CharField(max_length=6, default="143001")
-	email= models.EmailField( max_length = 254 )
-	phone_number= models.CharField(max_length=10)
-	city= models.CharField(max_length=20)
-	password= models.CharField(default=None,max_length=50)
-	valid= models.BooleanField(default=False)
-
-
-
+    UserID = models.IntegerField(primary_key = True)
+    FullName = models.CharField()
+    UserDescription = models.CharField()
+    UserCompany = models.CharField()
+    UserStatus = models.CharField(max_length = 1)
+    UserReportsTo = models.ForeignKey('self', null = True)
+    Password = models.CharField()
+    CreatedOn = models.DateField(auto_now_add = True)
+    Role = models.CharField()
+    Designation = models.CharField()
+    Phone = models.IntegerField(max_length = 10)
+    EmailID = models.EmailField()
+    Department = models.CharField(blank = True)
+    ValidTill = models.DateField()
+    UserType = models.CharField()
