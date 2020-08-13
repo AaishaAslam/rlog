@@ -8,7 +8,7 @@ class User(models.Model):
     UserDescription = models.TextField(null = True)
     UserCompany = models.TextField(null = True)
     UserStatus = models.TextField(max_length = 1, null = True)
-    UserReportsTo = models.ForeignKey('self', null = True, on_delete = models.RESTRICT)
+    UserReportsTo = models.ForeignKey('self', null = True, on_delete = models.RESTRICT, blank = True)
     Password = models.TextField(null = True)
     CreatedOn = models.DateField(auto_now_add = True, null = True)
     Role = models.TextField(null = True)
