@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'rlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rLOG',
+        'NAME': 'rlog',
 		'USER': 'postgres',
 		'PASSWORD': 'root',
 		'HOST': 'localhost'
