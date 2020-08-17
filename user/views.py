@@ -5,17 +5,17 @@ from django.contrib.auth.models import User
 # Create your views here.
 def index(request):
 	if request.method == 'POST':
-		full_name = request.POST['full_name']
-		organisation_type = request.POST['organisation_type']
-		organisation_name = request.POST['organisation_name']
-		designation = request.POST['designation']
-		pin_code = request.POST['pin_code']
-		email = request.POST['email']
-		phone_number = request.POST['phone_number']
-		city = request.POST['city']
-		password=User.objects.make_random_password()
+		FullName = request.POST['FullName']
+		UserType = request.POST['UserType']
+		UserCompany = request.POST['UserCompany']
+		Designation = request.POST['Designation']
+		##pin_code = request.POST['pin_code']
+		EmailID = request.POST['EmailID']
+		Phone = request.POST['Phone']
+		##city = request.POST['city']
+		Password=User.objects.make_random_password()
 
-		user = User(full_name=full_name,organisation_type=organisation_type,organisation_name=organisation_name,designation=designation,pin_code=pin_code,email=email,phone_number=phone_number,city=city,password=password)
+		user = User(FullName=FullName,UserType=UserType,UserCompany=UserCompany,Designation=Designation,EmailID=EmailID,Phone=Phone,Password=Password)
 		user.save()
 		print('user created')
 		return render(request,'signin.html')
@@ -23,6 +23,7 @@ def index(request):
 
 	else:
 		return render(request,'index.html')
+		
 		
 
 
