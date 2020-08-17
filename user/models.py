@@ -14,8 +14,7 @@ class User(models.Model):
     CreatedOn = models.DateField(auto_now_add = True, null = True)
     Role = models.TextField(null = True)
     Designation = models.TextField(null = True)
-    Phone = models.IntegerField(max_length = 10,null = True)
+    Phone = models.IntegerField(null = True)
     EmailID = models.EmailField(null = True)
     Department = models.TextField(blank = True)
     ValidTill = models.DateField(null = True)
-    
