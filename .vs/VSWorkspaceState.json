@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\dashboard",
+    "\\rlog",
+    "\\static",
     "\\templates",
     "\\user"
   ],
-  "SelectedNode": "\\templates\\signin.html",
+  "SelectedNode": "\\dashboard",
   "PreviewInSolutionExplorer": false
 }

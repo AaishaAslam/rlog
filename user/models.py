@@ -3,8 +3,9 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
-    # UserID = models.IntegerField(primary_key = True)
+	# UserID = models.IntegerField(primary_key = True)
     FullName = models.TextField(null = True)
+    UserType = models.TextField(null = True)
     UserDescription = models.TextField(null = True)
     UserCompany = models.TextField(null = True)
     UserStatus = models.TextField(max_length = 1, null = True)
@@ -13,8 +14,8 @@ class User(models.Model):
     CreatedOn = models.DateField(auto_now_add = True, null = True)
     Role = models.TextField(null = True)
     Designation = models.TextField(null = True)
-    Phone = models.IntegerField(null = True)
+    Phone = models.IntegerField(max_length = 10,null = True)
     EmailID = models.EmailField(null = True)
     Department = models.TextField(blank = True)
     ValidTill = models.DateField(null = True)
-    UserType = models.TextField(null = True)
+    
