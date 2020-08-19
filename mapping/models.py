@@ -1,10 +1,6 @@
 from django.db import models, migrations
-from django.contrib.postgres.operations import HStoreExtension
+from django.contrib.postgres.fields import HStoreField
 
-# class Migration(migrations.Migration):
-#     operations = [
-#         HStoreExtension(),
-#     ]
 
 # Create your models here.
 class Mapping(models.Model):
@@ -12,4 +8,4 @@ class Mapping(models.Model):
     UserID = models.IntegerField(null = True)
     MappingFor = models.TextField(null = True)
     CreatedOn = models.DateField(auto_now_add = True, null = True)
-    # Mappings = HStoreField()
+    Mappings = HStoreField(null = True)

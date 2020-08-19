@@ -1,5 +1,5 @@
 import pandas as pd
-from django.contrib.auth.models import Mapping
+from django.contrib.auth.models import User
 
 # making data frame
 data = pd.read_excel(r"D:\Candidate Report.xlsx")
@@ -10,7 +10,7 @@ df=[]
 df= list(data.columns)
 print (df)
 
-db = Mapping._meta.get_fields()
+db = User._meta.get_fields()
 
 print(db)
 
