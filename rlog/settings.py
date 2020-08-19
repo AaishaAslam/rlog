@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-	# 'mapping.apps.MappingConfig',
+	'records.apps.RecordsConfig',
+	'mapping.apps.MappingConfig',
 	'user.apps.UserConfig',
 	'django.contrib.postgres',
     'django.contrib.admin',
