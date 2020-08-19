@@ -22,6 +22,6 @@ class Mandates(models.Model):
     No_Filled = models.IntegerField(null = True)
     HiringMgrContact = models.IntegerField(null = True)
     HiringMgrEmail = models.TextField(null = True)
-    RecruiterAssignedTo = models.ForeignKey('user.User', on_delete = models.RESTRICT)
+    RecruiterAssignedTo = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
     AssignedDate = models.DateField(null = True)
-    ClientID = models.ForeignKey('records.Client', on_delete = models.RESTRICT)
+    ClientID = models.ForeignKey('records.Client', on_delete = models.DO_NOTHING)

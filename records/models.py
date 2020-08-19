@@ -11,8 +11,8 @@ class Client(models.Model):
 
 class StagingRecords(models.Model):
 	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
-	client = models.ForeignKey('Client', on_delete = models.RESTRICT)
+	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
+	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
 	position = models.TextField(null = True)
 	reqt_date = models.DateField(null = True)
 	date_cv_submitted = models.DateField(null = True)
@@ -58,8 +58,8 @@ class StagingRecords(models.Model):
 
 class GoodRecords(models.Model):
 	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
-	client = models.ForeignKey('Client', on_delete = models.RESTRICT)
+	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
+	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
 	position = models.TextField(null = True)
 	reqt_date = models.DateField(null = True)
 	date_cv_submitted = models.DateField(null = True)
@@ -106,8 +106,8 @@ class GoodRecords(models.Model):
 
 class BadRecords(models.Model):
 	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
-	client = models.ForeignKey('Client', on_delete = models.RESTRICT)
+	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
+	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
 	position = models.TextField(null = True)
 	reqt_date = models.DateField(null = True)
 	date_cv_submitted = models.DateField(null = True)
