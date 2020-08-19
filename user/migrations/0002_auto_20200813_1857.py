@@ -104,7 +104,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='UserReportsTo',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.RESTRICT, to='user.user'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.DO_NOTHING, to='user.user'),
         ),
         migrations.AddField(
             model_name='user',
