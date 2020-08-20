@@ -10,28 +10,6 @@ class Client(models.Model):
 
 
 class StagingRecords(models.Model):
-<<<<<<< HEAD
-	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
-	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
-	position = models.TextField(null = True)
-	reqt_date = models.DateField(null = True)
-	date_cv_submitted = models.DateField(null = True)
-	candidate_name = models.TextField(null = True)
-	current_status = models.IntegerField(null = True)
-	current_status_desc = models.TextField(null = True)
-	interview_date = models.DateField(blank = True)
-	remarks = models.TextField(blank = True)
-	skills = models.TextField(null = True)
-	current_org = models.TextField(null = True)
-	qualification = models.TextField(null = True)
-	total_exp = models.FloatField(null = True)
-	current_location = models.TextField(null = True)
-	contact_details_mobile = models.IntegerField(max_len = 10)
-	contact_details_phone2 = models.IntegerField(max_len = 10)
-	email = models.EmailField(null = True)
-    current_salary = models.DecimalField(null = True)
-=======
     sr_no = models.IntegerField(unique = True)
     recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
     client = models.ForeignKey('Client', on_delete = models.RESTRICT)
@@ -52,7 +30,6 @@ class StagingRecords(models.Model):
     contact_details_phone2 = models.IntegerField()
     email = models.EmailField(null = True)
     current_salary = models.FloatField(null = True)
->>>>>>> upstream/master
     expected_salary_percentage = models.IntegerField(null = True)
     expected_salary_amt = models.FloatField(null = True)
     notice_period = models.FloatField(null = True)
@@ -80,28 +57,6 @@ class StagingRecords(models.Model):
     wk_year = models.IntegerField(blank = True)
 
 class GoodRecords(models.Model):
-<<<<<<< HEAD
-	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
-	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
-	position = models.TextField(null = True)
-	reqt_date = models.DateField(null = True)
-	date_cv_submitted = models.DateField(null = True)
-	candidate_name = models.TextField(null = True)
-	current_status = models.IntegerField(null = True)
-	current_status_desc = models.TextField(null = True)
-	interview_date = models.DateField(blank = True)
-	remarks = models.TextField(blank = True)
-	skills = models.TextField(null = True)
-	current_org = models.TextField(null = True)
-	qualification = models.TextField(null = True)
-	total_exp = models.FloatField(null = True)
-	current_location = models.TextField(null = True)
-	contact_details_mobile = models.IntegerField(max_len = 10)
-	contact_details_phone2 = models.IntegerField(max_len = 10)
-	email = models.EmailField(null = True)
-    current_salary = models.DecimalField(null = True)
-=======
     sr_no = models.IntegerField(unique = True)
     recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
     client = models.ForeignKey('Client', on_delete = models.RESTRICT)
@@ -122,7 +77,6 @@ class GoodRecords(models.Model):
     contact_details_phone2 = models.IntegerField( )
     email = models.EmailField(null = True)
     current_salary = models.FloatField(null = True)
->>>>>>> upstream/master
     expected_salary_percentage = models.IntegerField(null = True)
     expected_salary_amt = models.FloatField(null = True)
     notice_period = models.FloatField(null = True)
@@ -151,28 +105,6 @@ class GoodRecords(models.Model):
 
 
 class BadRecords(models.Model):
-<<<<<<< HEAD
-	sr_no = models.IntegerField(unique = True)
-	recruiter = models.ForeignKey('user.User', on_delete = models.DO_NOTHING)
-	client = models.ForeignKey('Client', on_delete = models.DO_NOTHING)
-	position = models.TextField(null = True)
-	reqt_date = models.DateField(null = True)
-	date_cv_submitted = models.DateField(null = True)
-	candidate_name = models.TextField(null = True)
-	current_status = models.IntegerField(null = True)
-	current_status_desc = models.TextField(null = True)
-	interview_date = models.DateField(blank = True)
-	remarks = models.TextField(blank = True)
-	skills = models.TextField(null = True)
-	current_org = models.TextField(null = True)
-	qualification = models.TextField(null = True)
-	total_exp = models.FloatField(null = True)
-	current_location = models.TextField(null = True)
-	contact_details_mobile = models.IntegerField(max_len = 10)
-	contact_details_phone2 = models.IntegerField(max_len = 10)
-	email = models.EmailField(null = True)
-    current_salary = models.DecimalField(null = True)
-=======
     sr_no = models.IntegerField(unique = True)
     recruiter = models.ForeignKey('user.User', on_delete = models.RESTRICT)
     client = models.ForeignKey('Client', on_delete = models.RESTRICT)
@@ -193,7 +125,6 @@ class BadRecords(models.Model):
     contact_details_phone2 = models.IntegerField( )
     email = models.EmailField(null = True)
     current_salary = models.FloatField(null = True)
->>>>>>> upstream/master
     expected_salary_percentage = models.IntegerField(null = True)
     expected_salary_amt = models.FloatField(null = True)
     notice_period = models.FloatField(null = True)
