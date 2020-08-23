@@ -70,8 +70,8 @@ class Migration(migrations.Migration):
                 ('preferred_location', models.TextField(blank=True)),
                 ('week_number', models.IntegerField(blank=True)),
                 ('wk_year', models.IntegerField(blank=True)),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='records.client')),
-                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='user.user')),
+                ('client', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='records.client')),
+                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='user.user')),
             ],
         ),
         migrations.CreateModel(
@@ -121,8 +121,8 @@ class Migration(migrations.Migration):
                 ('preferred_location', models.TextField(blank=True)),
                 ('week_number', models.IntegerField(blank=True)),
                 ('wk_year', models.IntegerField(blank=True)),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='records.client')),
-                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='user.user')),
+                ('client', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='records.client')),
+                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='user.user')),
             ],
         ),
         migrations.CreateModel(
@@ -173,8 +173,8 @@ class Migration(migrations.Migration):
                 ('week_number', models.IntegerField(blank=True)),
                 ('wk_year', models.IntegerField(blank=True)),
                 ('reason', models.TextField(blank=True)),
-                ('client', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='records.client')),
-                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='user.user')),
+                ('client', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='records.client')),
+                ('recruiter', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='user.user')),
             ],
         ),
     ]
