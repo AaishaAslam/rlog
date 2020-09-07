@@ -2,3 +2,15 @@
   <div class = 'row'>
       {{ i }}
 {% endfor %}
+
+<input id="option" type="checkbox" value="checked" name="checkBox">
+
+{% for name in names %}                       
+    {{name}}:  
+    <select name="{{name}}">
+        {% for field in fields %}
+            <option value={{field}}>{{field}}</option>    
+        {% endfor %}
+    </select>
+{% endfor %}
+<input type="hidden" name="path_name" value={{path_name}}>
